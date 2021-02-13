@@ -26,7 +26,6 @@ blocks:
       jobs:
         - name: client npm install and cache
           commands:
-            - echo 'Deploying to production!'
             - cd src/client
             - 'cache restore client-node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum package-lock.json),client-node-modules-$SEMAPHORE_GIT_BRANCH,client-node-modules-master'
             - npm install
